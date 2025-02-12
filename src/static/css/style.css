@@ -1,0 +1,38 @@
+.content {
+    background: rgb(171,180,232);
+    background: linear-gradient(90deg, rgba(171,180,232,1) 0%, rgba(148,187,233,1) 100%);
+    min-height: 100vh;
+}
+
+.my_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 12vh;
+}
+
+.logo, .user {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border: solid;
+    border-radius: 30px;
+    border-width: 2px;
+}
+
+.header_ul {
+    width: 70vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .dropdown.active .dropdown-content {
+    max-height: 200px;
+  }
