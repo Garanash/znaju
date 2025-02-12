@@ -1,6 +1,6 @@
 .content {
-    background: rgb(171,180,232);
-    background: linear-gradient(90deg, rgba(171,180,232,1) 0%, rgba(148,187,233,1) 100%);
+    background: rgb(217,218,226);
+    background: linear-gradient(90deg, rgba(217,218,226,1) 0%, rgba(242,244,246,1) 100%);
     min-height: 100vh;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .logo, .user {
-    width: 10%;
+    width: 15%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -32,7 +32,7 @@
     overflow: hidden;
     transition: max-height 0.3s ease-out;
   }
-  
+
   .dropdown.active .dropdown-content {
     max-height: 200px;
   }
