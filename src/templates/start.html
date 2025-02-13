@@ -7,45 +7,275 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{ url_for('static', path='/css/reset.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', path='/css/style.css') }}" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
     <link rel="icon" href="{{ url_for('static', path='/svg/lamp.svg') }}">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.23.0/dist/css/uikit.min.css"/>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.0/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.0/dist/js/uikit-icons.min.js"></script>
     <title>УЗНАЮ</title>
 </head>
 <body class="content">
-<div class="container header">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 ">
-      <div class="col-md-3 mb-2 mb-md-0">
-        <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-          <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-        </a>
-      </div>
+<div class="fluid header">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-around py-3 mb-4 ">
+        <div class="container" style="position: relative;">
+        <svg width="50px" height="40px" viewBox="0 -4 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+                <g clip-path="url(#clip0_503_2726)">
+                    <rect x="0.25" y="0.25" width="27.5" height="19.5" rx="1.75" fill="white" stroke="#F5F5F5"
+                          stroke-width="0.5"></rect>
+                    <mask id="mask0_503_2726" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28"
+                          height="20">
+                        <rect x="0.25" y="0.25" width="27.5" height="19.5" rx="1.75" fill="white" stroke="white"
+                              stroke-width="0.5"></rect>
+                    </mask>
+                    <g mask="url(#mask0_503_2726)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 13.3333H28V6.66667H0V13.3333Z"
+                              fill="#0C47B7"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 20H28V13.3333H0V20Z" fill="#E53B35"></path>
+                    </g>
+                </g>
+                <defs>
+                    <clipPath id="clip0_503_2726">
+                        <rect width="28" height="20" rx="2" fill="white"></rect>
+                    </clipPath>
+                </defs>
+            </g>
+        </svg>
+        </div>
+        <nav uk-dropnav="align: center">
+            <ul class="uk-subnav">
+                <li class="uk-active"><a href>Школьная программа <span uk-drop-parent-icon></span></a>
+                    <div class="uk-dropdown">
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li class="uk-nav-header">Начальная школа (1-4 класс)</li>
+                            <li class="uk-active"><a href="#">Математика</a></li>
+                            <li><a href="#">Русский язык</a></li>
+                            <li><a href="#">Окружающий мир</a></li>
+                            <li><a href="#">Литературное чтение</a></li>
+                            <li><a href="#">Изобразительное искусство</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li class="uk-nav-header">Средняя и старшая школа (5-11 класс)</li>
+                            <li><a href="#">Алгебра</a></li>
+                            <li><a href="#">Геометрия</a></li>
+                            <li><a href="#">Русский язык</a></li>
+                            <li><a href="#">Информатика</a></li>
+                            <li><a href="#">Физика</a></li>
+                            <li><a href="#">География</a></li>
+                            <li><a href="#">Химия</a></li>
+                            <li><a href="#">Биология</a></li>
+                            <li><a href="#">История</a></li>
+                            <li><a href="#">Обществознание</a></li>
+                            <li><a href="#">Физкультура</a></li>
+                            <li><a href="#">Астрономия</a></li>
 
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 link-secondary">Искусство</a></li>
-        <li><a href="#" class="nav-link px-2">Наука</a></li>
-        <li><a href="#" class="nav-link px-2">Политика</a></li>
-        <li><a href="#" class="nav-link px-2">Техника</a></li>
-        <li><a href="#" class="nav-link px-2">Экономика</a></li>
-      </ul>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href>Языки <span uk-drop-parent-icon></span></a>
+                    <div class="uk-dropdown">
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li class="uk-active"><a href="#">Русский язык</a></li>
+                            <li><a href="#">Украинский язык</a></li>
+                            <li><a href="#">Белорусский языки</a></li>
+                            <li><a href="#">Чешский язык</a></li>
+                            <li><a href="#">Польский язык</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li><a href="#">Немецкий язык</a></li>
+                            <li><a href="#">Английский язык</a></li>
+                            <li><a href="#">Французский язык</a></li>
+                            <li><a href="#">Испанский язык</a></li>
+                            <li><a href="#">Шведский языки</a></li>
+                            <li><a href="#">Исландский язык</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li><a href="#">Китайский язык</a></li>
+                            <li><a href="#">Японский язык</a></li>
+                            <li><a href="#">Корейский язык</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href>Искусство <span uk-drop-parent-icon></span></a>
+                    <div class="uk-dropdown">
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li class="uk-nav-header">Музыка</li>
+                            <li class="uk-active"><a href="#">Струнные инструменты</a></li>
+                            <li><a href="#">Клавишные инструменты</a></li>
+                            <li><a href="#">Баянные инструменты</a></li>
+                            <li><a href="#">Духовые инструменты</a></li>
+                            <li><a href="#">Нотная грамота</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li class="uk-nav-header">Кино</li>
+                            <li><a href="#">Видеосъемка</a></li>
+                            <li><a href="#">Постановка света</a></li>
+                            <li><a href="#">Дубляж</a></li>
+                            <li><a href="#">Спецэффекты</a></li>
+                            <li><a href="#">Сценарии</a></li>
+                            <li><a href="#">Пост продакшн</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li class="uk-nav-header">Живопись</li>
+                            <li><a href="#">Цветосочетание</a></li>
+                            <li><a href="#">Мультипликация</a></li>
+                            <li><a href="#">Анимация</a></li>
+                            <li><a href="#">Ретушь</a></li>
+                            <li class="uk-nav-header">Писательское дело</li>
+                            <li><a href="#">Драматургия</a></li>
+                            <li><a href="#">Поэзия</a></li>
+                            <li><a href="#">Научная фантастика</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href>Программирование <span uk-drop-parent-icon></span></a>
+                    <div class="uk-dropdown">
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li class="uk-nav-header">Back-end</li>
+                            <li class="uk-active"><a href="#">SQL</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li><a href="#">Python</a></li>
+                            <li><a href="#">PHP</a></li>
+                            <li><a href="#">NodeJS</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li><a href="#">Docker</a></li>
+                            <li><a href="#">Kubernetes</a></li>
+                            <li><a href="#">Kafka</a></li>
+                            <li class="uk-nav-header">Front-end</li>
+                            <li><a href="#">HTML/CSS</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li><a href="#">Bootstrap</a></li>
+                            <li><a href="#">VueJS</a></li>
+                            <li><a href="#">Angular</a></li>
+                            <li class="uk-nav-header">App-dev</li>
+                            <li><a href="#">C++</a></li>
+                            <li><a href="#">C#</a></li>
+                            <li><a href="#">Java</a></li>
+                            <li><a href="#">Kotlin</a></li>
+                            <li><a href="#">Swift</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href>Экономика <span uk-drop-parent-icon></span></a>
+                    <div class="uk-dropdown">
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li class="uk-nav-header">Микро экономика</li>
+                            <li class="uk-active"><a href="#">Теория потребления</a></li>
+                            <li><a href="#">Теория производства</a></li>
+                            <li><a href="#">Агрегирование</a></li>
+                            <li><a href="#">Структура рынка</a></li>
+                            <li class="uk-nav-header">Макро экономика</li>
+                            <li><a href="#">Экономический рост</a></li>
+                            <li><a href="#">Экономические циклы</a></li>
+                            <li><a href="#">Денежное обращение</a></li>
+                            <li><a href="#">Торговый баланс</a></li>
+                            <li class="uk-nav-header">Международная экономика</li>
+                            <li><a href="#">Международная торговля</a></li>
+                            <li><a href="#">Международные финансы</a></li>
+                            <li><a href="#">Международные экономические отношения</a></li>
+                            <li class="uk-nav-header">Мировая экономика</li>
+                            <li><a href="#">Глобальные проблемы</a></li>
+                            <li><a href="#">Пределы роста</a></li>
+                            <li><a href="#">Международное неравенство</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href>Прикладные навыки <span uk-drop-parent-icon></span></a>
+                    <div class="uk-dropdown uk-width-large">
+                        <div class="uk-child-width-1-2" uk-grid>
+                            <div>
+                                <ul class="uk-nav uk-dropdown-nav">
+                                    <li class="uk-nav-header">Строительное дело</li>
+                                    <li><a href="#">Проектирование</a></li>
+                                    <li><a href="#">Электрика</a></li>
+                                    <li><a href="#">Сантехника</a></li>
+                                    <li><a href="#">Потолочное дело</a></li>
+                                    <li><a href="#">Укладка половых покрытий</a></li>
+                                    <li><a href="#">Малярное дело</a></li>
+                                    <li><a href="#">Черновая отделка</a></li>
+                                    <li><a href="#">Демонтаж</a></li>
+                                    <li><a href="#">Строительство загородных домов</a></li>
+                                    <li><a href="#">Сварка</a></li>
+                                    <li><a href="#">Токарное дело</a></li>
+                                    <li><a href="#">Слесарное дело</a></li>
+                                    <li><a href="#">Промышленный альпинизм</a></li>
+                                    <li class="uk-nav-header">Аграрное дело</li>
+                                    <li><a href="#">Садоводство</a></li>
+                                    <li><a href="#">Ландшафтный дизайн</a></li>
+                                    <li><a href="#">Разведение рогатого скота</a></li>
+                                    <li><a href="#">Ветеринарное дело</a></li>
+                                </ul>
+                            </div>
+                            <ul class="uk-nav uk-dropdown-nav">
+                                <li class="uk-nav-header">Мода и дизайн</li>
+                                <li><a href="#">Парикмахерское дело</a></li>
+                                <li><a href="#">Педикюр</a></li>
+                                <li><a href="#">Маникюр</a></li>
+                                <li><a href="#">Стилистика</a></li>
 
-      <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2">Login</button>
-        <button type="button" class="btn btn-primary">Sign-up</button>
-      </div>
+                                <li class="uk-nav-header">Педагогика</li>
+                                <li><a href="#">Дошкольное образование</a></li>
+                                <li><a href="#">Младшая школа</a></li>
+                                <li><a href="#">Педагогика</a></li>
+                                <li><a href="#">Тренерское дело</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
     </header>
-  </div>
+</div>
 
-<div class="container body" style="min-height:70vh;">
-
+<div class="fluid body" style="min-height:70vh;">
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+            <div class="col-lg-7 text-center text-lg-start">
+                <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Друзья! Все ЗНАНИЯ мы собрали в одном месте!</h1>
+                <p class="col-lg-10 fs-4">Наверное каждый из нас хоть на минутку задумывался о том что хотел бы изучить
+                    что-то новое, или ощущал дефицит знаний в какой-то теме. <br>Мы группа энтузиастов которые решили
+                    собрать
+                    все знания в одном месте.<br> Присоединяйся к нам</p>
+            </div>
+            <div class="col-md-10 mx-auto col-lg-5">
+                <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Электронная почта</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Пароль</label>
+                    </div>
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" value="remember-me"> запомнить
+                        </label>
+                    </div>
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">Войти</button>
+                    <br><br>
+                    <a class="w-100 btn btn-lg btn btn-outline-secondary" href="/registration">Зарегистрироваться</a>
+                    <small class="text-body-secondary">Нажимая кнопку войти вы соглашаетесь с условиями использования
+                        платформы.</small>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="container footer">
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 ">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 ">
 
-      <span class="mb-3 mb-md-0 text-body-secondary">© 2025 Garanash/Hermilac, Inc</span>
+        <span class="mb-3 mb-md-0 text-body-secondary">© 2025 Garanash/Hermilac, Inc</span>
 
-  </footer>
+    </footer>
 </div>
 <script src="{{ url_for('static', path='/js/script.js') }}"></script>
 </body>
