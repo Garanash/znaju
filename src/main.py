@@ -4,11 +4,10 @@ from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 
 
-
-
 main_app = FastAPI()
 main_app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory='templates')
+
 
 @main_app.get('/')
 def hello_world(request: Request):
