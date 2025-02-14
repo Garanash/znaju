@@ -4,12 +4,9 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
     app_title: str = 'App title'
     app_version: str = '1.0.0'
-    database_url: str = 'postgresql+asyncpg://postgres:postgres@db:5432/fastapi'
-    postgres_db: str = 'fastapi'
-    postgres_user: str = 'postgres'
-    postgres_password: str = 'postgres'
-    db_host: str = 'db'
-    db_port: int = 5432
+    database_url: str = 'sqlite+aiosqlite:///./fastapi.db' # noqa
+    secret: str = 'secret'
+
 
     class Config:
         env_file = '.env'
