@@ -10,7 +10,6 @@ class UserRead(schemas.BaseUser[int]):
     last_name: Optional[str] = None
     is_active: bool
     last_visit: Optional[datetime.date] = None
-    expirience: int = None
 
 
 class UserCreate(schemas.BaseUserCreate):
@@ -18,7 +17,7 @@ class UserCreate(schemas.BaseUserCreate):
     password: str
     first_name: str
     last_name: Optional[str] = None
-    patronimic: Optional[str] = None
+    patronymic: Optional[str] = None
     birthdate: datetime.datetime
     bio: Optional[str] = None
 
@@ -27,7 +26,7 @@ class UserUpdate(schemas.BaseUserUpdate):
     email: Optional[str] = None
     first_name: Optional[str] = None
     last_name: Optional[str] = None
-    patronimic: Optional[str] = None
+    patronymic: Optional[str] = None
     birthdate: Optional[datetime.datetime] = None
     bio: Optional[str] = None
     password: Optional[str] = None

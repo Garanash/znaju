@@ -15,10 +15,10 @@ from fastapi_users.authentication import (
 from fastapi_users_db_sqlalchemy import SQLAlchemyUserDatabase
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.core.config import settings
-from src.core.db import get_session
-from src.models.user import User
-from src.schemas.user import UserCreate
+from core.config import settings
+from core.db import get_session
+from models.user import User
+from schemas.user import UserCreate
 
 
 async def get_user_db_connection(session: AsyncSession = Depends(get_session)):
@@ -39,7 +39,7 @@ def get_jwt_strategy() -> JWTStrategy:
 auth_backend = AuthenticationBackend(
     name='cookie_backend',
     transport=cookie_transport,
-    strategy=get_jwt_strategy
+    get_strategy=get_jwt_strategy
 )
 
 
