@@ -30,3 +30,7 @@
   .dropdown.active .dropdown-content {
     max-height: 200px;
   }
+
+ .lesson {
+ background-color: red;
+ }

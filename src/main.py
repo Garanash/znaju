@@ -17,5 +17,10 @@ def hello_world(request: Request):
     return templates.TemplateResponse('start.html', {'request': request})
 
 
-if __name__ == '__main__':
-    uvicorn.run('main:main_app', reload=True)
+@main_app.get("/informatika")
+def informatika(request: Request):
+    return templates.TemplateResponse('start_informatika.html', {'request': request})
+
+
+if __name__ == "__main__":
+    uvicorn.run("main:main_app", reload=True)
